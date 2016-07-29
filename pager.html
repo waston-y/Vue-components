@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue-components</title>
+	<script src="//cdn.bootcss.com/vue/1.0.24/vue.min.js"></script>
+</head>
+<body>
+	<div>
+		<div id="parent">
+			<pager :total="100" :size="10"></pager>
+		</div>
+		<template id="pager">
+			<ul v-el:list>
+			<ul>
+		</template>
+	</div>
+
+	<script type="text/javascript">
+		new Vue({
+			el: 'body',
+			components: {pager}
+		})
+
+		var pager = new Vue({
+			el: "#pager",
+			props: {
+				total: {
+					type: Number,
+					required: true,
+					default: 0,
+				},
+
+				size: {
+					type: Number,
+					default: 10,
+				}
+			},
+			data(){
+				return{
+					msg: 'Hello Vue'
+				}
+			},
+			created(){
+				let component = this
+				component.display()
+			},
+			methods: {
+				display(){
+					let component = this
+					let list = component.$els.list
+					var pn = Math.ceil(component.total/component.size) 
+					if(pn < 10){
+						let li = document.createElement('li')
+						for(let i in pn){
+							li.textContent = i
+							li.setAttribute('@click', 'redirect')
+							list.appendChild(li)
+						}
+					}
+				},
+			}
+		})
+
+
+
+	</script>
+</body>
+</html>
