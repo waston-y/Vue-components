@@ -1,14 +1,11 @@
 <style lang="sass"></style>
 <template>
-	<router-view></router-view>	
+	这里是主页
 </template>
 <script>
 	export default {
-		replace: false,
 		data(){
-			return {
-				
-			}
+
 		},
 	}
 </script>

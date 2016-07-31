@@ -1,14 +1,13 @@
 <style lang="sass"></style>
 <template>
-	<router-view></router-view>	
+	<div>分页器插件</div>
 </template>
 <script>
 	export default {
-		replace: false,
 		data(){
 			return {
 				
 			}
-		},
+		}
 	}
 </script>
