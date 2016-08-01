@@ -7,7 +7,7 @@
 		replace: false,
 		data(){
 			return {
-				
+				msg: ''
 			}
 		},
 	}
