@@ -1,43 +1,26 @@
 $progress-color: #d95547;
-.pk-progress-bar{
-    position: relative;
-    width: 98%;
-    .progress-msg{
-      position: absolute;
-      left: -16px;
-      top: -26px;
-      width: 36px;
-      transition: margin-left 1s;
-      .percent{
-        color: white;
-        padding: 1px 2px;
-        background: $progress-color;
-        border-radius: 3px;
-        font-size: 10px;
-      }
-      .triangle{
-        position: absolute;
-        height: 5px;
-        width: 5px;
-        top: -4px;
-        left: 37%;
-        background: #D9534F;
-        transform: rotate(45deg);
-      }
-    }
-  .bar{
-    border-radius: 3px;
-    height: 10px;
-  }
-  .bar-outer{
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #e0e0e0;
-    .bar-inner{
-      position: absolute;
-      background: $progress-color;
-      transition: all 1s;
-    }
-  }
+.progress-bar{
+	position: relative;
+	width: 98%;
+
+	.bar{
+		border-radius: 4px;
+		height: 20px;
+	}
+	.bar-outer{
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		background: #e0e0e0;
+		.bar-inner{
+			position: absolute;
+			background: $progress-color;
+			transition: all 0.5s;
+			text-align: center;
+			span{
+				line-height: 20px;
+				color: white;
+			}
+		}
+	}
 }

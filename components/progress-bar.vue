@@ -1,14 +1,11 @@
 <style lang="sass" src="./progress-bar.scss"></style>
+
 <template>
-<div class="pk-progress-bar">
-    <div v-el:msgbox class="progress-msg">
-        <span v-el:showpercent class="percent">0%</span>
-        <div style="position: relative">
-            <span class="triangle"></span>
-        </div>
-    </div>
+<div class="progress-bar">
     <div v-el:outer class="bar bar-outer">
-        <div v-el:inner class="bar bar-inner" :style="{width: (progress*100) + '%'}"></div>
+        <div v-el:inner class="bar bar-inner" :style="{width: (progress*100) + '%'}">
+        	<span v-el:show class="percent">0%</span>
+        </div>
     </div>
 </div>
 </template>
@@ -26,20 +23,28 @@ export default {
     },
     data(){
         return{
-            timer: null,
         }
     },
-    watch: {   /*监视*/
-        'progress': function(newVal, oldVal){
+    ready(){
+    	let component = this
+        component.sync()
+    },
+
+    watch: {   /*watching*/
+        'progress': function(newVal){
             if(newVal == undefined)
-                return false;  //验证失败，终止函数。
-            let component = this;
-            var msgBox = component.$els.msgbox
-            var pct = component.$els.showpercent
-            if(newVal == 0) pct.innerHTML = '0%' //清空状态
-            msgBox.style.marginLeft = newVal * 100 + '%'
-            pct.innerHTML = (newVal * 100).toFixed(0) + '%'
+                return false;  //stop function
+            let component = this
+            component.sync()   
         }
     },
+
+    methods: {
+    	sync(){
+			let component = this
+       		component.$els.show.innerHTML = 
+        		(component.progress == 0) ? '0%' : (component.progress*100).toFixed(0) + '%'
+    	}
+    }
 }
 </script>
