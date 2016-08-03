@@ -14,16 +14,11 @@
 				</div>
 				<div class="do">
 					<div class="btn-group">
-						<button class="btn btn-small" @click="progressBar('0')">0%</button>
-						<button class="btn btn-small" @click="progressBar('0.5')">50%</button>
-						<button class="btn btn-small" @click="progressBar('1')">100%</button>
+						<button class="btn btn-small btn-default" @click="progressBar('0')">0%</button>
+						<button class="btn btn-small btn-default" @click="progressBar('0.5')">50%</button>
+						<button class="btn btn-small btn-default" @click="progressBar('1')">100%</button>
 					</div>
 				</div>
-				<pre>
-					use:
-					//The value of progress should between 0~1 and must be float type
-					<[progress-bar] :progress="progress"><[progress-bar]>
-				</pre>
 			</section>
 		</div>
 
