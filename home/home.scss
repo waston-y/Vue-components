@@ -1,0 +1,33 @@
+.sidebar {
+    h3 {
+        padding: 20px;
+        color: #007ACC;
+    }
+    ul {
+        padding: 20px 30px 40px 30px;
+        background: #FAFAFA;
+        list-style: none;
+        li {
+            line-height: 30px;
+            a {
+                color: #007ACC;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    h4 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    .section-content {
+        padding: 30px;
+    }
+    .do {
+        padding: 10px 30px;
+    }
+}
