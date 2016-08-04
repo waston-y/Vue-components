@@ -4,6 +4,7 @@
 			<h3>Component list</h3>
 			<ul>
 				<li><a href="#progress-bar">progress bar</a></li>
+				<li><a href="#slider">slider</a></li>
 			</ul>
 		</div>
 		<div class="col-md-9 col-xs-12" style="float: right">
@@ -20,16 +21,32 @@
 					</div>
 				</div>
 			</section>
+			<section id="slider">
+				<h4>slider</h4>
+				<div class="section-content">
+					<slider :images="images" :width="732" :height="320"></slider>
+				</div>
+			</section>
 		</div>
-
-	
-
 </template>
 <script>
     export default {
         data() {
                 return {
                     progress: 0,
+                    images: [{
+                        src: '/images/1.jpg',
+                        href: ''
+                    }, {
+                        src: '/images/2.jpg',
+                        href: ''
+                    }, {
+                        src: '/images/3.jpg',
+                        href: ''
+                    }, {
+                        src: '/images/4.jpg',
+                        href: ''
+                    }, ],
                 }
             },
 
