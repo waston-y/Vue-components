@@ -2,7 +2,7 @@
 
 <template>
 	<nav class="navbar navbar-inverse navbar-static-top">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
@@ -29,12 +29,12 @@
 	
 </template>
 <script>
-	export default {
-		replace: false,
-		data(){
-			return {
-				msg: ''
-			}
-		},
-	}
+    export default {
+        replace: false,
+        data() {
+            return {
+                msg: ''
+            }
+        },
+    }
 </script>
