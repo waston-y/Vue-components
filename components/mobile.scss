@@ -1,0 +1,152 @@
+.iphone-container {
+    width: 100%;
+    .phone-shape {
+        border-color: #444;
+        background-color: #333;
+        box-shadow: -47px 0 0 rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 0, 0, 0.6);
+        width: 319px;
+        height: 656px;
+        border-radius: 40px;
+        margin: 0 auto;
+        padding: 60px 10px;
+        position: relative;
+        .top-details {
+            position: absolute;
+            left: 0;
+            top: 17px;
+            width: 100%;
+            .camera,
+            .circle,
+            .speaker {
+                background-color: #222;
+                border-radius: 100px;
+                display: block;
+            }
+            .camera {
+                height: 7px;
+                width: 7px;
+                margin: auto;
+            }
+            .circle {
+                height: 9px;
+                width: 9px;
+                position: absolute;
+                left: 95px;
+                top: 16px;
+            }
+            .speaker {
+                height: 7px;
+                width: 90px;
+                margin: 10px auto 0;
+            }
+        }
+        .phone-screen {
+            height: 522px;
+            width: 298px;
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+            overflow: hidden;
+            position: relative;
+            .phone-content {
+                position: absolute;
+                padding: 8px;
+                overflow: hidden;
+            }
+        }
+        .circle-button {
+            height: 50px;
+            width: 50px;
+            margin: 16px auto;
+            border-radius: 100px;
+            background-color: #222;
+        }
+        .buttons,
+        .button.last {
+            width: 3px;
+            position: absolute;
+        }
+        .buttons {
+            background-color: #333;
+            box-shadow: -45px 0 0 rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 0, 0, 0.6);
+        }
+        .button.last {
+            background-color: #333;
+            box-shadow: -45px 0 0 rgba(0, 0, 0, 0.075), 0 0 0 2px rgba(0, 0, 0, 0.6);
+        }
+        .button-one {
+            height: 20px;
+            left: -7px;
+            top: 59px;
+            border-radius: 4px 0 0 4px;
+        }
+        .button-two {
+            height: 40px;
+            width: 3px;
+            left: -7px;
+            top: 110px;
+            border-radius: 4px 0 0 4px;
+        }
+        .button-three {
+            height: 40px;
+            width: 3px;
+            left: -7px;
+            top: 165px;
+            border-radius: 4px 0 0 4px;
+        }
+        .button-four {
+            height: 40px;
+            width: 3px;
+            right: -7px;
+            top: 110px;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+    /* 右侧滑动条样式 */
+    .slider-bar {
+        position: absolute;
+        height: 504px;
+        top: 0px;
+        left: 370px;
+        margin-top: 70px;
+        width: 22px;
+        border: 1px solid #f0f0f0;
+        border-radius: 10px;
+        border-bottom: none;
+        border-top: none;
+        box-shadow: 0px 0px 2px #888888;
+        .slider-box {
+            position: relative;
+            background: #999999;
+            height: 444px;
+            width: 3px;
+            margin: 0 auto;
+            .slider-btn {
+                position: absolute;
+                top: 0;
+                left: -8px;
+            }
+        }
+        .circle-btn {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            height: 22px;
+            width: 22px;
+            border-radius: 11px;
+            padding: 0;
+            line-height: 20px;
+            margin-left: -1px;
+            .fa {
+                font-size: 16px;
+            }
+        }
+        .top-btn {
+            margin-bottom: 8px;
+            border-top: none;
+        }
+        .bottom-btn {
+            margin-top: 8px;
+            border-bottom: none;
+        }
+    }
+    /* 右侧滑动条样式表结束 */
+}

@@ -1,12 +1,12 @@
 <style lang="sass" src="./home.scss"></style>
 <template>
 		<div class="col-md-3 col-xs-12 sidebar">
-			<h3>Component list</h3>
+			<h3>组件列表</h3>
 			<ul>
-				<li><a href="#slider">slider</a></li>
-				<li><a href="#progress-bar">progress bar</a></li>
-				<li><a href="#pager">page</a></li>
-				<li><a href="#phone">phone</a></li>
+				<li><a href="#slider">slider/简单轮播组件</a></li>
+				<li><a href="#progress-bar">progress bar/进度条组件</a></li>
+				<li><a href="#pager">pager/分页器组件</a></li>
+				<li><a href="#phone">phone/手机效果</a></li>
 			</ul>
 		</div>
 		<div class="col-md-9 col-xs-12" style="float: right">
@@ -35,6 +35,28 @@
 
 			<section id="phone">
 				<h4>iphone/iphone外观组件</h4>
+				<div class="section-content">
+					<mobile>
+						<slot>
+							<h1>Title1</h1>
+							<h2>Title1</h2>
+							<h3>Title1</h3>
+							<h4>Title1</h4>
+							<h1>Title2</h1>
+							<h2>Title2</h2>
+							<h3>Title2</h3>
+							<h4>Title2</h4>
+							<h1>Title3</h1>
+							<h2>Title3</h2>
+							<h3>Title3</h3>
+							<h4>Title3</h4>
+							<h1>Title4</h1>
+							<h2>Title4</h2>
+							<h3>Title4</h3>
+							<h4>Title4</h4>
+						</slot>
+					</mobile>
+				</div>
 			</section>
 
 		</div>
