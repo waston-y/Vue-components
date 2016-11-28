@@ -1,10 +1,9 @@
 <style lang="sass" src="./progress-bar.scss"></style>
-
 <template>
-<div class="progress-bar">
+<div class="progress-bar" style="border-radius: 3px; background: #e0e0e0;">
     <div v-el:outer class="bar bar-outer">
         <div v-el:inner class="bar bar-inner" :style="{width: (progress*100) + '%'}">
-        	<span v-el:show class="percent">0%</span>
+        	<span v-el:show class="percent" style="padding-left: 3px;">0%</span>
         </div>
     </div>
 </div>
@@ -25,24 +24,21 @@
             return {}
         },
         ready() {
-            let component = this
-            component.sync()
+            this.sync()
         },
 
         watch: { /*watching*/
-            'progress': function(newVal) {
+            progress(newVal) {
                 if (newVal == undefined)
-                    return false; //stop function
-                let component = this
-                component.sync()
+                    return false // stop function
+                this.sync()
             }
         },
 
         methods: {
             sync() {
-                let component = this
-                component.$els.show.innerHTML =
-                    (component.progress == 0) ? '0%' : (component.progress * 100).toFixed(0) + '%'
+                this.$els.show.innerHTML =
+                    (this.progress === 0) ? '0%' : `${(this.progress * 100).toFixed(0)}%`
             }
         }
     }

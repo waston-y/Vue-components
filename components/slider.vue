@@ -64,8 +64,7 @@
             }
         },
         ready() {
-            let component = this
-            component.init()
+            this.init()
         },
         methods: {
             init() {

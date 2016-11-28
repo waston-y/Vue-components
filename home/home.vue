@@ -3,21 +3,21 @@
 		<div class="col-md-3 col-xs-12 sidebar">
 			<h3>组件列表</h3>
 			<ul>
-				<li><a href="#slider">slider/简单轮播组件</a></li>
-				<li><a href="#progress-bar">progress bar/进度条组件</a></li>
-				<li><a href="#pager">pager/分页器组件</a></li>
-				<li><a href="#phone">phone/手机效果</a></li>
+				<li><a href="#slider">简单轮播组件/slider</a></li>
+				<li><a href="#progress-bar">进度条组件/progress-bar</a></li>
+				<li><a href="#pager">分页器组件/pager</a></li>
+				<li><a href="#phone">手机外观组件/iphone</a></li>
 			</ul>
 		</div>
-		<div class="col-md-9 col-xs-12" style="float: right">
+		<div class="col-md-9 col-xs-12" style="float: right; border-left: 1px solid #e5e5e5;">
 			<section id="slider">
-				<h4>Slider/简单轮播组件</h4>
+				<h4>简单轮播组件/slider</h4>
 				<div class="section-content">
 					<slider :images="images" :width="732" :height="320"></slider>
 				</div>
 			</section>
 			<section id="progress-bar">
-				<h4>Progress bar/进度条组件</h4>
+				<h4>进度条组件/progress-bar</h4>
 				<div class="section-content">
 					<progress-bar :progress="progress"></progress-bar>
 				</div>
@@ -30,11 +30,12 @@
 				</div>
 			</section>
 			<section id="pager">
-				<h4>Pager/分页组件</h4>
+				<h4>分页器组件/pager</h4>
+				<pager :pn="1" :total="144" :cb="go"></pager>
 			</section>
 
 			<section id="phone">
-				<h4>iphone/iphone外观组件</h4>
+				<h4>手机外观组件/iphone</h4>
 				<div class="section-content">
 					<mobile>
 						<slot>
@@ -86,7 +87,10 @@
                 progressBar(val) {
                     let component = this
                     component.progress = parseFloat(val)
-                }
+                },
+				go(pn) {
+					alert(pn)
+				}
             },
     }
 </script>
