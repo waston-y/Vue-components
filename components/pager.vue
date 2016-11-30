@@ -109,7 +109,7 @@
 				this.choose(this.pn)
 			},
 			next() {
-				this.pn = this.pn === this.pageNum ? this.pageNum: this.pageNum + 1
+				this.pn = this.pn === this.pageNum ? this.pageNum: this.pn + 1
 				this.choose(this.pn)
 			},
 			getPagerList() {
