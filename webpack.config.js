@@ -20,7 +20,7 @@ module.exports = {
         //加载器配置
         loaders: [
             { test: /\.css$/, loader: 'style-loader!css-loader' },
-            { test: /\.scss$/, loader: '!style!css!sass'},
+            { test: /\.(less|scss)$/, loader: '!style!css!sass!less'},
             { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
             { test: /\.vue$/, loader: 'vue-loader'},
             { test: /\.js$/, exclude: /node_modules/,  loader: 'babel'},
